@@ -36,7 +36,7 @@
 
 		var str=document.getElementById("a").value;
 
-		document.getElementById("b").value=unescape(replaceAll(str, "\\", "%"));
+		document.getElementById("b").value=unescape(replaceAll(str, "\\", "/"));
 
 	 }
 
@@ -48,7 +48,7 @@
 
 		var str=document.getElementById("aa").value;
 
-		document.getElementById("bb").value=escape(replaceAll(str, "\\", "%"));
+		document.getElementById("bb").value=escape(replaceAll(str, "\\", "/"));
 
 		
 
@@ -58,11 +58,11 @@
 
 <body>
 
-<input type="text" id="a"/><a href="javascript:unicodeToKor()">변환(유니코드 -> 한글)</a> <input type="text" id="b"/>
+<input type="text" id="a"/><a href="javascript:unicodeToKor()"> 변환(유니코드 -> 한글) </a> <input type="text" id="b"/>
 
 <br><br><br>
 
-<input type="text" id="aa"/><a href="javascript:korToUnicode()">변환(한글 -> 유니코드)</a> <input type="text" id="bb"/>
+<input type="text" id="aa"/><a href="javascript:korToUnicode()"> 변환(한글 -> 유니코드) </a> <input type="text" id="bb"/>
 
 </body>
 
