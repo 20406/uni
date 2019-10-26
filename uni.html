@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>test</title>
+
+<meta charset="UTF-8">
+
+</head>
+
+<script>
+
+	function replaceAll(strTemp, strValue1, strValue2){ 
+
+            while(1){
+
+                if( strTemp.indexOf(strValue1) != -1 )
+
+                    strTemp = strTemp.replace(strValue1, strValue2);
+
+                else
+
+                    break;
+
+            }
+
+            return strTemp;
+
+     }
+
+	 function unicodeToKor(){
+
+	 //유니코드 -> 한글
+
+		var str=document.getElementById("a").value;
+
+		document.getElementById("b").value=unescape(replaceAll(str, "\\", "%"));
+
+	 }
+
+	 
+
+	 function korToUnicode(){
+
+	 //한글 -> 유니코드
+
+		var str=document.getElementById("aa").value;
+
+		document.getElementById("bb").value=escape(replaceAll(str, "\\", "%"));
+
+		
+
+	 }
+
+</script>
+
+<body>
+
+<input type="text" id="a"/><a href="javascript:unicodeToKor()">변환(유니코드 -> 한글)</a> <input type="text" id="b"/>
+
+<br><br><br>
+
+<input type="text" id="aa"/><a href="javascript:korToUnicode()">변환(한글 -> 유니코드)</a> <input type="text" id="bb"/>
+
+</body>
+
+</html>
